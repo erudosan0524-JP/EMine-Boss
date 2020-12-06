@@ -1,6 +1,6 @@
 package net.erudosaba.mc.emineboss.boss;
 
-public enum BossAtribute {
+public enum BossAttribute {
     FIRE("炎"),
     WATER("水"),
     NATURE("自然"),
@@ -15,7 +15,7 @@ public enum BossAtribute {
 
     private String name;
 
-    private BossAtribute(String name) {
+    private BossAttribute(String name) {
         this.name = name;
     }
 
