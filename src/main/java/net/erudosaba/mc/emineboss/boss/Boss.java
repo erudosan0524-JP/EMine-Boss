@@ -2,22 +2,24 @@ package net.erudosaba.mc.emineboss.boss;
 
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.potion.Potion;
+import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
 
-public class BossManager implements IBossManager {
+public class Boss implements IBossManager {
 
     private String name;
     private BossType type;
     private BossAttribute attribute;
     private BossEquipment equipment;
-    private List<PotionEffectType> effects;
+    private List<PotionEffect> effects;
 
     private List<BossSkill> skills;
 
     @Override
-    public boolean register(String name, BossType type, BossAttribute attribute, BossEquipment equipment, List<PotionEffectType> effects) {
+    public boolean register(String name, BossType type, BossAttribute attribute, BossEquipment equipment, List<PotionEffect> effects) {
         this.name = name;
         this.type = type;
         this.attribute = attribute;
@@ -40,7 +42,7 @@ public class BossManager implements IBossManager {
         return this.skills;
     }
 
-    public List<PotionEffectType> getEffects() {
+    public List<PotionEffect> getEffects() {
         return this.effects;
     }
 
