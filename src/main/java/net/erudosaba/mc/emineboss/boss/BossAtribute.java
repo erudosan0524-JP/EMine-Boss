@@ -13,7 +13,13 @@ public enum BossAtribute {
     DIRT("土"),
     NORMAL("ノーマル");
 
-    private BossAtribute(String name) {
+    private String name;
 
+    private BossAtribute(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
